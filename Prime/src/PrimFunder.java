@@ -29,7 +29,7 @@ public class PrimFunder {
 					break;
 				}
 			}
-
+//
 			if (flag == 1)
 				System.out.println(i);
 		}

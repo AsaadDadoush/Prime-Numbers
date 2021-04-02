@@ -2,15 +2,15 @@ import java.util.*;
 
 public class PrimeNumberCheck {
 
-	public static String isPrime(int number) {
+	public static String isPrime(int n) {
 		
-		if (number == 1)
+		
+		if (n == 1)
 			return "Non-Prime";
 		
-		for (int divisor = 2; divisor < number; divisor++) {
-			boolean isNumberDivisibleByDivisor = (number
-					% divisor == 0);
-			if (isNumberDivisibleByDivisor)
+		for (int div = 2; div < n; div++) {
+			boolean isNDivByDivisor = (n	% div == 0);
+			if (isNDivByDivisor)
 				return "Non-Prime";
 		}
 		return "Prime";
@@ -28,8 +28,8 @@ public class PrimeNumberCheck {
 			
 		}
 		long estimatedTime = System.nanoTime() - startTime;
-		double TimeOnSec = (estimatedTime/Math.pow(10, 9));
-		System.out.println(TimeOnSec);
+		double TimeOnSec = (estimatedTime/Math.pow(10.0, 9.0));
+		System.out.println("estimated time : " + TimeOnSec);
 
 	}
 

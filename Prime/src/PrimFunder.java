@@ -5,18 +5,18 @@ public class PrimFunder {
 	public static void main(String[] args)
 	{
 		Scanner sc = new Scanner(System.in);
-		int a, b, i, j, flag;
+		int x, y, i, j, flag;
 
-		System.out.printf("Enter lower bound of the interval: ");
-		a = sc.nextInt(); 
+		System.out.printf("Enter lower value of the interval: ");
+		x = sc.nextInt(); 
 
 		System.out.printf("\nEnter upper bound of the interval: ");
-		b = sc.nextInt(); 
+		y = sc.nextInt(); 
 		long startTime = System.nanoTime(); 
 
-		System.out.printf("\nPrime numbers between %d and %d are: ", a, b);
+		System.out.printf("\nPrime numbers between %d and %d are: ", x, y);
 
-		for (i = a; i <= b; i++) {
+		for (i = x; i <= y; i++) {
 
 			if (i == 1 || i == 0)
 				continue;
@@ -29,12 +29,12 @@ public class PrimFunder {
 					break;
 				}
 			}
-//
 			if (flag == 1)
 				System.out.println(i);
 		}
 		long estimatedTime = System.nanoTime() - startTime;
-		System.out.println(estimatedTime);
+		double TimeOnSec = (estimatedTime/Math.pow(10, 9));
+		System.out.println("estimated time: " + TimeOnSec);
 	}
 	
 }

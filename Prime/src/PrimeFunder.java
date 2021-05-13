@@ -1,12 +1,11 @@
 import java.util.Scanner;
 
-public class PrimFunder {
+public class PrimeFunder {
 
 	public static void main(String[] args)
 	{
 		Scanner sc = new Scanner(System.in);
 		int x, y, i, j, flag;
-
 		System.out.printf("Enter lower value of the interval: ");
 		x = sc.nextInt(); 
 
@@ -17,12 +16,10 @@ public class PrimFunder {
 		System.out.printf("\nPrime numbers between %d and %d are: ", x, y);
 
 		for (i = x; i <= y; i++) {
-
 			if (i == 1 || i == 0)
 				continue;
-
-			flag = 1;
-
+		flag = 1;
+	
 			for (j = 2; j <= i / 2; ++j) {
 				if (i % j == 0) {
 					flag = 0;

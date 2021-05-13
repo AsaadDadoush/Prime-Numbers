@@ -9,7 +9,7 @@ class SieveOfEratosthenes {
 		{
 			if (prime[p] == true)
 			{
-				for (int i = p * p; i <= n; i += p)
+				for (int i = p* p ; i <= n; i += p)
 					prime[i] = false;
 			}
 		}
@@ -22,7 +22,8 @@ class SieveOfEratosthenes {
 	public static void main(String args[])
 	{
 		long startTime = System.nanoTime(); 
-		int n = 1000000;
+		int n = 10;
+		
 		System.out.print("Following are the prime numbers ");
 		System.out.println("smaller than or equal to " + n);
 		SieveOfEratosthenes g = new SieveOfEratosthenes();
